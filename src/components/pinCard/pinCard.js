@@ -5,8 +5,8 @@ import Link from '../../assets/Link.png'
 const SourceLink = ({ source }) => {
     return (
         <div className="pinCard__source__container">
-            <img src={Link} alt="Link" />
-            <span className="pinCard__source__text">{source}</span>
+            <img className="pinCard__source_imageLink" src={Link} alt="Link" />
+            <a href={source} className="pinCard__source__text">{source}</a>
         </div>
     );
 };
