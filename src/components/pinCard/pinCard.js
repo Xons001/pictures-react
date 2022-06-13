@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./pinCard.css";
+import Link from '../../assets/Link.png'
 
 const SourceLink = ({ source }) => {
     return (
         <div className="pinCard__source__container">
+            <img src={Link} alt="Link" />
             <span className="pinCard__source__text">{source}</span>
         </div>
     );
@@ -21,7 +23,7 @@ const PinCard = ({urlImage, name, source}) => {
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <img className="pinCard__image" src={urlImage} alt={`pin-${name}`} />
-                {isHovered && <SourceLink source={source} />}
+                {isHovered && <SourceLink source={source} /> }
             </div>
             <span className="pinCard__name">{name}</span>
         </div>
